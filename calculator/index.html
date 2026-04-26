@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - JB</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(169, 169, 189, 0.234);
+            perspective: 1000px;
+        }
+
+        .scene {
+            transform-style: preserve-3d;
+        }
+
+        .phone {
+            position: relative;
+            padding: 7px;
+            border-radius: 48px;
+            background: linear-gradient(145deg, #3b3b45, #050507);
+            box-shadow:
+                0 35px 70px rgba(0, 0, 0, 0.722),
+                inset 0 0 8px rgba(255, 255, 255, 0.052);
+            transform: rotateX(8deg) rotateY(-10deg);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .phone:hover {
+            transform: rotateX(0deg) rotateY(0deg) scale(1.03);
+            box-shadow:
+                0 45px 90px rgba(0, 0, 0, 0.65),
+                inset 0 0 10px rgba(255, 255, 255, 0.22);
+        }
+
+        .speaker {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 82px;
+            height: 8px;
+            border-radius: 999px;
+            background: #050507;
+            box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.18);
+            z-index: 5;
+        }
+
+        main {
+            width: 300px;
+            height: 567px;
+            border-radius: 39px;
+            background: rgb(18, 18, 28);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 2px solid rgba(255, 255, 255, 0.08);
+            box-shadow:
+                inset 0 0 8px rgba(255, 255, 255, 0.08),
+                inset 0 0 25px rgba(0, 0, 0, 0.75);
+        }
+
+        #clock {
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            color: white;
+            padding: 9px;
+        }
+
+        #display {
+            background: rgb(18, 18, 28);
+            border: none;
+            color: white;
+            font-size: 60px;
+            text-align: right;
+            font-weight: 500;
+            width: 95%;
+            outline: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7px;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            height: 55px;
+            width: 55px;
+            border-radius: 50%;
+            border: none;
+            background: rgb(71, 78, 76);
+            color: white;
+            cursor: pointer;
+
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+            transition: 0.2s;
+        }
+
+        .buttons button:hover {
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .buttons button:active {
+            box-shadow:
+                inset 0 0 30px rgba(254, 254, 254, 0.7),
+                0 0 100px white;
+            transform: scale(0.95);
+        }
+
+        #equal {
+            background: rgb(255, 0, 64);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <div class="phone">
+            <div class="speaker"></div>
+            <main>
+
+                <div id="clock"></div>
+
+                <input type="text" id="display" value="0" readonly>
+
+                <div class="buttons">
+
+                    <button onclick="clearDisplay()">AC</button>
+                    <button onclick="append('%')">%</button>
+                    <button onclick="deleteLast()">DEL</button>
+                    <button onclick="append('/')">/</button>
+
+                    <button onclick="append('7')">7</button>
+                    <button onclick="append('8')">8</button>
+                    <button onclick="append('9')">9</button>
+                    <button onclick="append('*')">×</button>
+
+                    <button onclick="append('4')">4</button>
+                    <button onclick="append('5')">5</button>
+                    <button onclick="append('6')">6</button>
+                    <button onclick="append('-')">-</button>
+
+                    <button onclick="append('1')">1</button>
+                    <button onclick="append('2')">2</button>
+                    <button onclick="append('3')">3</button>
+                    <button onclick="append('+')">+</button>
+
+                    <button onclick="append('00')">00</button>
+                    <button onclick="append('0')">0</button>
+                    <button onclick="append('.')">.</button>
+                    <button onclick="calculate()" id="equal">=</button>
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+
+        function append(value) {
+            if (display.value === "0") {
+                display.value = value;
+            } else {
+                display.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            display.value = "0";
+        }
+
+        function deleteLast() {
+            display.value = display.value.slice(0, -1) || "0";
+        }
+
+        function calculate() {
+            try {
+                display.value = eval(display.value);
+            } catch {
+                display.value = "Error";
+            }
+        }
+        function updateTime() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+
+            document.getElementById("clock").textContent =
+                hours + ":" + minutes;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+
+</body>
+
+</html>
