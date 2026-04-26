@@ -1,5 +1,3 @@
-﻿# calculator-webpage
-
 # 📱 Calculator Web App
 
 <p align="center">
@@ -7,34 +5,43 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5" />
-  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3" />
-  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript" />
+  <img src="https://img.shields.io/badge/HTML5-structure-orange?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-styling-blue?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-logic-yellow?style=for-the-badge&logo=javascript&logoColor=black"/>
 </p>
 
-https://jbmsacps-stack.github.io/calculator-webpage/code/index.html
+---
 
-![calculator](screenshot.png)
+## 🔗 Live Demo
+
+👉 https://jbmsacps-stack.github.io/calculator-webpage/code/index.html
+
+---
+
+## 📸 Preview
+
+![Calculator UI](screenshot.png)
 
 ---
 
 ## 🧾 Overview
 
-This project is a **functional calculator web application** designed to replicate a **modern mobile calculator interface**.
-It focuses on clean UI structure, responsive layout, and interactive user experience using core frontend technologies.
+A functional calculator web application designed to replicate a **modern mobile calculator interface**.
+The project focuses on layout precision, clean UI design, and interactive behavior using core frontend technologies.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
 * Arithmetic operations: `+  −  ×  ÷`
-* Input editing:
+* Input controls:
 
   * Clear (`AC`)
   * Delete (`DEL`)
-* Live clock display (`HH:MM` format)
-* Smooth UI interactions (hover & active states)
-* Mobile-style layout with rounded frame
+* Live clock display (`HH:MM`)
+* Interactive button feedback (hover & active states)
+* Mobile-style layout with rounded edges
+* Smooth UI transitions
 
 ---
 
@@ -43,66 +50,68 @@ It focuses on clean UI structure, responsive layout, and interactive user experi
 | Layer     | Technology | Responsibility              |
 | --------- | ---------- | --------------------------- |
 | Structure | HTML       | Layout and elements         |
-| Styling   | CSS        | UI design and positioning   |
+| Styling   | CSS        | Visual design and layout    |
 | Logic     | JavaScript | Input handling & evaluation |
 
 ---
 
-## 🎨 UI & Design Principles
+## 🎨 Design Approach
 
-* Dark theme for reduced visual strain
-* Circular buttons with **inset glow effects**
-* Grid-based layout for consistent spacing
-* Subtle transitions for interaction feedback
-* Minimal, focused interface
+* Dark theme for reduced eye strain
+* Circular button layout with inset glow
+* Grid-based structure for alignment
+* Minimal UI focused on usability
+* Smooth interaction feedback
 
 ---
 
-## ⚙️ Implementation Details
+## ⚙️ Implementation Highlights
 
-* Button inputs are handled via DOM manipulation
-* Expressions are evaluated using:
+* DOM-based button interaction
+* Expression evaluation using:
 
-  ```javascript
-  eval(expression)
-  ```
-* Clock updates dynamically using:
+```javascript
+eval(expression)
+```
 
-  ```javascript
-  setInterval()
-  ```
+* Real-time clock using:
+
+```javascript
+setInterval()
+```
 
 ---
 
 ## 📂 Project Structure
 
-```id="u5r9cl"
+```
 .
-└── index.html   # Contains HTML, CSS (internal), and JavaScript
+└── index.html
 ```
 
 ---
 
 ## ⚠️ Technical Note
 
-The project uses `eval()` for expression evaluation due to its simplicity.
-For production-grade applications, it is recommended to replace it with a **custom parser or math library** to avoid security risks.
+This project uses `eval()` for simplicity.
+In production environments, this should be replaced with a **custom parser or math library** for better security.
 
 ---
 
-## 🚀 Future Enhancements
+## 🚀 Future Improvements
 
 * Keyboard input support
-* Improved calculation engine (without `eval`)
-* Scientific calculator functions
-* Responsive scaling for different screen sizes
-* UI refinements (animations, haptics simulation)
+* Replace `eval()` with safer logic
+* Add scientific calculator features
+* Improve responsiveness
+* Enhance animations
 
 ---
 
 ## 👤 Author
 
 **JB**
+
 ---
 
 ## 📌 License
