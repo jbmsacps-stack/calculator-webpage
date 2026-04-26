@@ -12,6 +12,9 @@
   <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript" />
 </p>
 
+https://jbmsacps-stack.github.io/calculator-webpage/code/index.html
+
+![calculator](screenshot.png)
 ---
 
 ## 🧾 Overview
