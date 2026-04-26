@@ -20,7 +20,7 @@
 
 ## 📸 Preview
 
-![Calculator UI](screenshot1.png)
+![Calculator UI](screenshot.png)
 
 ---
 
