@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-structure-orange?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-styling-blue?style=for-the-badge&logo=css3&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-logic-yellow?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5" />
+  <img src="https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript" />
 </p>
 
 ---
@@ -26,55 +26,55 @@
 
 ## 🧾 Overview
 
-A functional calculator web application designed to replicate a **modern mobile calculator interface**.
-The project focuses on layout precision, clean UI design, and interactive behavior using core frontend technologies.
+A fully functional calculator web application designed to replicate a **modern mobile calculator interface**.
+This project emphasizes clean UI structure, responsive layout, and interactive behavior using core frontend technologies.
 
 ---
 
 ## ✨ Features
 
-* Arithmetic operations: `+  −  ×  ÷`
+* Basic arithmetic operations: `+  −  ×  ÷`
 * Input controls:
 
   * Clear (`AC`)
   * Delete (`DEL`)
-* Live clock display (`HH:MM`)
-* Interactive button feedback (hover & active states)
-* Mobile-style layout with rounded edges
-* Smooth UI transitions
+* Real-time clock display (`HH:MM`)
+* Interactive button states (hover & active effects)
+* Mobile-style layout with rounded frame
+* Smooth visual feedback and transitions
 
 ---
 
 ## 🏗️ Architecture
 
-| Layer     | Technology | Responsibility              |
-| --------- | ---------- | --------------------------- |
-| Structure | HTML       | Layout and elements         |
-| Styling   | CSS        | Visual design and layout    |
-| Logic     | JavaScript | Input handling & evaluation |
+| Layer     | Technology | Responsibility                |
+| --------- | ---------- | ----------------------------- |
+| Structure | HTML       | Markup and layout             |
+| Styling   | CSS        | UI design and visual effects  |
+| Logic     | JavaScript | Input handling and evaluation |
 
 ---
 
 ## 🎨 Design Approach
 
-* Dark theme for reduced eye strain
-* Circular button layout with inset glow
-* Grid-based structure for alignment
-* Minimal UI focused on usability
-* Smooth interaction feedback
+* Dark theme for visual comfort
+* Circular button system with inset glow effects
+* Grid-based layout for consistent alignment
+* Subtle transitions for interaction feedback
+* Minimal, distraction-free interface
 
 ---
 
 ## ⚙️ Implementation Highlights
 
-* DOM-based button interaction
+* DOM-based input handling for button interactions
 * Expression evaluation using:
 
 ```javascript
 eval(expression)
 ```
 
-* Real-time clock using:
+* Real-time clock implemented using:
 
 ```javascript
 setInterval()
@@ -91,20 +91,20 @@ setInterval()
 
 ---
 
-## ⚠️ Technical Note
+## ⚠️ Technical Consideration
 
-This project uses `eval()` for simplicity.
-In production environments, this should be replaced with a **custom parser or math library** for better security.
+The project uses `eval()` for expression evaluation due to its simplicity.
+For production-grade applications, it is recommended to replace this with a **custom parsing logic or a dedicated math library** to ensure safety and scalability.
 
 ---
 
 ## 🚀 Future Improvements
 
 * Keyboard input support
-* Replace `eval()` with safer logic
-* Add scientific calculator features
-* Improve responsiveness
-* Enhance animations
+* Safer calculation engine (without `eval`)
+* Scientific calculator features
+* Improved responsiveness across devices
+* Enhanced UI animations and feedback
 
 ---
 
@@ -116,10 +116,10 @@ In production environments, this should be replaced with a **custom parser or ma
 
 ## 📌 License
 
-This project is intended for **learning and demonstration purposes**.
+This project is intended for **learning and demonstration purposes only**.
 
 ---
 
 <p align="center">
-  ⭐ If you found this useful, consider starring the repository.
+  ⭐ If you found this project useful, consider starring the repository.
 </p>
