@@ -24,6 +24,7 @@
 
         .scene {
             transform-style: preserve-3d;
+            padding: 40px;
         }
 
         .phone {
@@ -38,7 +39,7 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .phone:hover {
+        .scene:hover .phone {
             transform: rotateX(0deg) rotateY(0deg) scale(1.03);
             box-shadow:
                 0 45px 90px rgba(0, 0, 0, 0.65),
