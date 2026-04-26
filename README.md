@@ -14,7 +14,6 @@
 
 https://jbmsacps-stack.github.io/calculator-webpage/code/index.html
 
-![calculator](screenshot.png)
 ---
 
 ## 🧾 Overview
