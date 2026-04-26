@@ -14,7 +14,7 @@
 
 ## 🔗 Live Demo
 
-👉 https://jbmsacps-stack.github.io/calculator-webpage/calculator/index.html
+👉 https://jbmsacps-stack.github.io/calculator-webpage/calculator.html
 
 ---
 
